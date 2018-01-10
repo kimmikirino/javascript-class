@@ -60,7 +60,7 @@ for(var i=0; i < products.length; i++) {
     bodyProduct += '<div class="name-box__ball"> cor: <div class="ball" style="background-color:' + products[i].color + '"></div>';
     bodyProduct += ' Tamanho: <span class="name-box__size">' + products[i].size + '</span></div></div></td>';
     bodyProduct += '<td class="align-middle">'+ products[i].price +'</td>' ;
-    bodyProduct += '<td class="align-middle">'+ products[i].qty +'</td>' ;
+    bodyProduct += '<td class="align-middle"><div class="qty"><div class="qty__left">-</div><div class="qty__middle">'+ products[i].qty +'</div><div class="qty__right">+</div></div></td>' ;
     bodyProduct += '<td class="align-middle">'+ products[i].total +'</td>' ;
     bodyProduct += '</tr>';
 }

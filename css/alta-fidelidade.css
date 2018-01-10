@@ -34,3 +34,29 @@
     padding: 3px;
     margin-left: 10px;
 }
+
+.qty {
+    display: flex;
+    align-items: center;
+}
+
+.qty__left, .qty__right, .qty__middle {
+    display: inline-block;
+    padding: 3px 10px;
+    border: 1px solid lightgray;
+}
+
+.qty__left {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px; 
+}
+
+.qty__middle {
+    padding: 3px 10px;
+}
+
+.qty__right {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px; 
+}
+
