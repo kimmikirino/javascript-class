@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="revisao.js"></script>
+    <title>Lógica</title>
+</head>
+<body>
+    <main style="padding: 40px">        
+        <form action="" class="">
+            <div class="form-group row">
+                <label for="nome" class="col-2 col-form-label">Nome:</label>
+                <div class="col-10 input-group">
+                    <div class="input-group-addon">@</div>
+                    <input type="text" name="nome" class="form-control"  id="nome" placeholder="Nome do usuário">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="idade" class="col-2 col-form-label">Idade:</label>
+                <div class="col-10 input-group">
+                    <div class="input-group-addon">Número</div>
+                    <input type="number" class="form-control"  name="idade" id="idade" placeholder="Idade">
+                </div>
+            </div>
+            <input type="button" id="validar" onclick="testar()" class="btn btn-success" value="Cadastrar">
+            <input type="button" id="listar" onclick="listarClientes()" class="btn btn-success" value="Listar">
+            <input type="button" id="ordenar" onclick="ordenarClientes('nome')" class="btn btn-success" value="Ordenar por nome">
+            <input type="button" id="ordenar" onclick="ordenarClientes('idade')" class="btn btn-success" value="Ordenar por idade">
+        </form>
+        <div class="card text-center" style="margin-top:20px" >
+            <div class="card-header">
+              Resultado
+            </div>
+            <ul class="list-group list-group-flush" id="informacao">
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

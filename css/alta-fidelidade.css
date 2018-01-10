@@ -1,0 +1,36 @@
+.img-red {
+    width: 80px;  
+    margin-right: 15px;  
+}
+
+.ball {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+}
+
+.name-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-box__ball{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.name-box__size {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 10px;
+}
