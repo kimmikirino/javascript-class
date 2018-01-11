@@ -108,6 +108,10 @@
     padding: 20px 0;
 }
 
+.shipping-form {
+    margin-bottom: 10px;
+}
+
 .custom-select {
     width: 100%;
 }
