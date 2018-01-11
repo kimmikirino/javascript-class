@@ -1,16 +1,47 @@
+.delete-item {
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    width: 20px;
+    height: 20px;
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    color: white;
+    background-color: lightgrey;
+    cursor: pointer;
+}
+.delete-item:hover {
+    background-color: #ef8642;
+    border-color: #ef8642;
+}
+
 .img-red {
     width: 80px;  
     margin-right: 15px;  
 }
 
 .ball {
-    border: 1px solid white;
+    border: 1px solid lightgray;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     display: inline-block;
     margin: 5px;
+    padding: 2px;
+    background-clip: content-box;
+    margin-bottom: 0;
 }
+
+/* .ball:before {
+    content: "";
+    border: 1px solid lightgrey;
+    padding: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+} */
 
 .box{
     display: flex;
@@ -44,6 +75,8 @@
     display: inline-block;
     padding: 3px 10px;
     border: 1px solid lightgray;
+    background-color: #e8e8e8;
+    cursor: pointer;
 }
 
 .qty__left {
@@ -53,6 +86,9 @@
 
 .qty__middle {
     padding: 3px 10px;
+    border-left: none;
+    border-right: none;
+    background-color: white;
 }
 
 .qty__right {
@@ -60,3 +96,6 @@
     border-bottom-right-radius: 50px; 
 }
 
+.text-inline {
+    display: inline-block;
+}
