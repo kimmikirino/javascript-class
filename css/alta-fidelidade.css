@@ -1,3 +1,7 @@
+.cart__shopping-qty {
+    margin: 10px;
+}
+
 .delete-item {
     border-radius: 50%;
     border: 1px solid lightgray;
@@ -31,7 +35,6 @@
     margin: 5px;
     padding: 2px;
     background-clip: content-box;
-    margin-bottom: 0;
 }
 
 /* .ball:before {
@@ -57,6 +60,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-size: 0.7rem;
 }
 
 .name-box__size {
@@ -98,4 +102,16 @@
 
 .text-inline {
     display: inline-block;
+}
+
+.container {
+    padding: 20px 0;
+}
+
+.custom-select {
+    width: 100%;
+}
+
+.card-block__check {
+    border-right: 1px solid lightgray; 
 }
