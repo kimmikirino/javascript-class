@@ -11,7 +11,7 @@
     <title>Lógica</title>
 </head>
 
-<body>
+<body onload="list()">
     <main style="padding: 40px">
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item col-4">
@@ -48,12 +48,12 @@
             </div>
             <div class="tab-pane" id="shipping" role="tabpanel">
                 <div class="container">
-                    <form class="shipping-form">
+                    <form class="shipping-form" id="shipping-form">
                         <div class="row">
                             <div class="col">
                                 <p>Shipping <b>address</b></p>
                                 <div class="form-group">
-                                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="country" name="country">
                                         <option selected>Country</option>
                                         <option value="1">Brazil</option>
                                         <option value="2">Canada</option>
@@ -61,7 +61,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="city" name="city" >
                                             <option selected>City</option>
                                             <option value="1">São Paulo</option>
                                             <option value="2">Rio de janeiro</option>
@@ -69,31 +69,31 @@
                                         </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="State / Region / Province">
+                                    <input type="text" class="form-control" id="state" name="state" placeholder="State / Region / Province">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Zip code">
+                                    <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Zip code">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Address1">
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Address1">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="Address2">
+                                    <input type="text" class="form-control" id="address2" name="address2" placeholder="Address2">
                                 </div>
                             </div>
                             <div class="col">
                                 <p><b>Contact</b> info</p>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="formGroupExampleInput5" placeholder="First Name">
+                                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="formGroupExampleInput6" placeholder="Last Name">
+                                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="formGroupExampleInput7" placeholder="E-mail">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="formGroupExampleInput8" placeholder="Phone">
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" >
                                 </div>
                                 <div class="card">
                                     <div class="card-header">
@@ -103,13 +103,13 @@
                                         <div class="row">
                                             <div class="form-check col card-block__check">
                                                 <label class="form-check-label">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                    <input class="form-check-input" type="radio" name="shippingMethod" id="shippingMethod" value="standard" checked>
                                                     <span>$10 Standard </span><br>(2-3 weeks)
                                                 </label>
                                             </div>
                                             <div class="form-check col">
                                                 <label class="form-check-label">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                    <input class="form-check-input" type="radio" name="shippingMethod" id="shippingMethod2" value="ultraspeed">
                                                     <span>$20 Ultra Speed</span> <br>(1-3days)
                                                 </label>
                                             </div>
@@ -120,7 +120,7 @@
                         </div>
                     </form>
                     <button class="btn btn-secondary" onclick="changeTab(event, 'cart', 'shoppingLink')"> < Shopping cart</button>
-                    <button class="btn btn-success float-right" onclick="changeTab(event, 'payment', 'paymentLink')">Payment Method ></button>
+                    <button class="btn btn-success float-right" onclick="changeTab(event, 'payment', 'paymentLink'); saveData()">Payment Method ></button>
                 </div>
             </div>
             <div class="tab-pane" id="payment" role="tabpanel">

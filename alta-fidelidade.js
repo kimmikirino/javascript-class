@@ -54,6 +54,8 @@ var products = [
 
 ];
 
+var userData = {};
+
 function criarElemento(tag, texto, classe, append) {
     var criaElemento = document.createElement(tag);
     var elementoTexto = document.createTextNode(texto);
@@ -125,7 +127,6 @@ function remove(id) {
 }
 
 function changeTab(event, tabName, linkTab) {
-    console.log(tabName);
     // Declare all variables
     var i, tabcontent, tablinks;
     
@@ -146,5 +147,12 @@ function changeTab(event, tabName, linkTab) {
         document.getElementById(linkTab).className += " active";
 }
 
+function saveData() {
+    var shippingElements = document.getElementById('shipping-form').elements;
 
-list();
+    for(var i = 0; i < shippingElements.length; i++) {
+        userData[shippingElements[i].name] = shippingElements[i].value;
+    }
+
+    console.log(userData);
+}
