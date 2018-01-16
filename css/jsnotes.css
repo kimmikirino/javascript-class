@@ -90,15 +90,61 @@ main {
     position: relative;
 }
 
-.notes-input__name {
+.notes-input__name, .notes-items__name {
     background-color: #e8e8e8;
     position: absolute;
     top: -8px;
     left: 10px;
 }
 
+.note-title {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.text-input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 3px;
+}
+
 .notes-items {
-    margin-top: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.notes-items__btn {
+    padding: 2px 7px;
+    border: 1px solid #959595;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.items-list {
+    padding: 10px 0;
+}
+
+.items-list__input {
+    box-shadow: 3px 3px 5px #959595;
+    width: 85%;
+    margin: 5px 0;
+}
+
+.btn-remove {
+    margin-left: 8px;
+}
+
+.items-buttons {
+    text-align: right;
+}
+
+.btn {
+    background-color: #ffbb00;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #959595;
+    margin: 5px;
+    min-width: 135px;
 }
 
 @media (min-width: 375px) 
