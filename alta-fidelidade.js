@@ -14,7 +14,7 @@ var products = [
     },
     {
         id: 2,
-        image:  {
+        image: {
             src: 'images/2.jpg',
             alt: 'Camisa 2',
             title: 'Camisa azur'
@@ -27,7 +27,7 @@ var products = [
     },
     {
         id: 4,
-        image:  {
+        image: {
             src: 'images/3.jpg',
             alt: 'Camisa 3',
             title: 'Camisa tb azur'
@@ -40,7 +40,7 @@ var products = [
     },
     {
         id: 3,
-        image:  {
+        image: {
             src: 'images/4.png',
             alt: 'Camisa 4',
             title: 'Camisa rosa'
@@ -129,30 +129,40 @@ function remove(id) {
 function changeTab(event, tabName, linkTab) {
     // Declare all variables
     var i, tabcontent, tablinks;
-    
-        // Get all elements with class="tabcontent" and hide them
-        tabcontent = document.getElementsByClassName("tab-pane");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-    
-        // Get all elements with class="tablinks" and remove the class "active"
-        tablinks = document.getElementsByClassName("nav-link");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-    
-        // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(tabName).style.display = "block";
-        document.getElementById(linkTab).className += " active";
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tab-pane");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("nav-link");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    document.getElementById(linkTab).className += " active";
 }
 
 function saveData() {
     var shippingElements = document.getElementById('shipping-form').elements;
+    var isBlank;
 
-    for(var i = 0; i < shippingElements.length; i++) {
+    for (var i = 0; i < shippingElements.length; i++) {
         userData[shippingElements[i].name] = shippingElements[i].value;
+        if (!isBlank) {
+            isBlank = shippingElements[i].value === "";
+        } 
     }
 
     console.log(userData);
+    if (isBlank) {
+        alert('É necessário preencher todos os campos.');
+    } else {
+        changeTab(event, 'payment', 'paymentLink');
+
+    }
 }
