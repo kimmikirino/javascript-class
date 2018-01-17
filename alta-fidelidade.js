@@ -152,9 +152,19 @@ function saveData() {
     var isBlank;
 
     for (var i = 0; i < shippingElements.length; i++) {
+        if (shippingElements[i].name === 'shippingMethod' && shippingElements[i].checked) {
+            userData['shippingMethod'] = shippingElements[i].value;
+            break;
+        }
+
         userData[shippingElements[i].name] = shippingElements[i].value;
-        if (!isBlank) {
-            isBlank = shippingElements[i].value === "";
+
+        if (!isBlank) {    
+            if (shippingElements[i].name === 'city' || shippingElements[i].name === 'country') {
+                isBlank =  userData[shippingElements[i].name] === '0';
+            } else {
+                isBlank =  userData[shippingElements[i].name].trim().length === 0;
+            }
         } 
     }
 
